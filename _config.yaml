@@ -1,0 +1,27 @@
+title: My Blog
+description: Here are some interesting articles
+url: "https://vasukalariya.github.io"
+
+# Jekyll settings
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
+# Build settings
+exclude:
+  - node_modules/
+  - package.json
+  - package-lock.json
+  - sync.js
+  - .env
+  - README.md
+
+# Plugins (GitHub Pages compatible)
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag

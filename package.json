@@ -1,15 +1,32 @@
 {
-  "name": "ecliptic-equinox",
-  "type": "module",
-  "version": "0.0.1",
+  "name": "notion-blog-sync",
+  "version": "1.0.0",
+  "description": "Sync Notion database to Jekyll blog and deploy to GitHub Pages",
+  "main": "sync.js",
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "sync": "node sync.js",
+    "sync:full": "SYNC_MODE=full node sync.js",
+    "sync:incremental": "SYNC_MODE=incremental node sync.js",
+    "test": "node sync.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vasukalariya/vasukalariya.github.io.git"
+  },
+  "keywords": [
+    "notion",
+    "jekyll",
+    "blog",
+    "github-pages"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
   "dependencies": {
-    "astro": "^5.16.6",
-    "notion-astro-loader": "^0.4.0"
+    "@notionhq/client": "^5.6.0",
+    "dotenv": "^17.2.3",
+    "notion-to-md": "^3.1.9"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
