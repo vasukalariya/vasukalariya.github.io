@@ -2,14 +2,31 @@ title: Vasu's Blog
 url: "https://vasukalariya.github.io"
 baseurl: ""
 
+# Just the Docs - Modern theme with built-in dark mode
+remote_theme: just-the-docs/just-the-docs
+
+# Author
+author:
+  name: Vasu Kalariya
+  email: firstname lastname 2 [at] gmail [dot] com
+
+# Navigation
+nav_enabled: true
+search_enabled: true
+
+# Footer
+footer_content: "Built with Jekyll and Notion."
+
+# Social links in footer
+aux_links:
+  "GitHub": "https://github.com/vasukalariya"
+  "LinkedIn": "https://www.linkedin.com/in/vasukalariya"
+
 # Build settings
 markdown: kramdown
-remote_theme: academicpages/academicpages.github.io
+permalink: /blog/:year/:month/:day/:title/
 
-# Permalink structure for posts
-permalink: /:year/:month/:day/:title/
-
-# Exclude from processing
+# Exclude
 exclude:
   - node_modules/
   - package.json
@@ -21,11 +38,12 @@ exclude:
   - Gemfile.lock
   - vendor/
 
-# Plugins (GitHub Pages compatible)
+# Plugins
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-remote-theme
 
 # Timezone
 timezone: America/Los_Angeles
