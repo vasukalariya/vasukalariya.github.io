@@ -1,15 +1,10 @@
-title: Vasu Kalariya's Blog
-description: Here are some interesting articles
+title: Vasu's Blog
 url: "https://vasukalariya.github.io"
 baseurl: ""
 
-# Author
-author:
-  name: Vasu Kalariya
-
 # Build settings
 markdown: kramdown
-theme: minima
+remote_theme: academicpages/academicpages.github.io
 
 # Permalink structure for posts
 permalink: /:year/:month/:day/:title/
