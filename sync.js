@@ -16,7 +16,7 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 
 (async () => {
   const databaseId = process.env.DATABASE_ID;
-  const postsDir = path.join(__dirname, "posts");
+  const postsDir = path.join(__dirname, "_posts");  // Jekyll requires _posts folder!
 
   console.log(`Starting sync with mode: ${SYNC_MODE}`);
   console.log(`Database ID: ${databaseId}`);

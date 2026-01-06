@@ -1,18 +1,20 @@
-title: My Blog
+title: Vasu Kalariya's Blog
 description: Here are some interesting articles
 url: "https://vasukalariya.github.io"
+baseurl: ""
 
-# Jekyll settings
-markdown: kramdown
-permalink: /:year/:month/:day/:title/
-
-# Collections
-collections:
-  posts:
-    output: true
-    permalink: /blog/:year/:month/:day/:title/
+# Author
+author:
+  name: Vasu Kalariya
 
 # Build settings
+markdown: kramdown
+theme: minima
+
+# Permalink structure for posts
+permalink: /:year/:month/:day/:title/
+
+# Exclude from processing
 exclude:
   - node_modules/
   - package.json
@@ -20,8 +22,15 @@ exclude:
   - sync.js
   - .env
   - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
 
 # Plugins (GitHub Pages compatible)
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Timezone
+timezone: America/Los_Angeles
