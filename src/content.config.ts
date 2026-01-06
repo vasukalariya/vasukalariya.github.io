@@ -5,7 +5,7 @@ const blog = defineCollection({
   loader: notionLoader({
     auth: import.meta.env.NOTION_TOKEN,
     database_id: import.meta.env.NOTION_DATABASE_ID,
-    filter: { property: 'Status', select: { equals: 'Published' } }
+    filter: { property: 'Status', status: { equals: 'Published' } }
   }),
 });
 

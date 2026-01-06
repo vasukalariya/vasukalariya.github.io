@@ -3,11 +3,16 @@ import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
-  return posts.map(post => ({
-    params: { slug: post.data.Slug },
-    props: { post },
-  }));
+  
+  // Filter to ensure every post has a valid slug before mapping
+  return posts
+    .filter(post => post.data.Slug) 
+    .map((post) => ({
+      params: { slug: post.data.Slug },
+      props: { post },
+    }));
 }
+
 const { post } = Astro.props;
 const { Content } = await render(post);
 ---
