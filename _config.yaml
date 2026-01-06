@@ -1,49 +1,31 @@
 title: Vasu's Blog
 url: "https://vasukalariya.github.io"
-baseurl: ""
 
-# Just the Docs - Modern theme with built-in dark mode
-remote_theme: just-the-docs/just-the-docs
+# Minima - The cleanest, most minimal theme
+theme: minima
 
-# Author
+# Simple config - auto dark mode based on system
+minima:
+  skin: auto
+  social_links:
+    - { platform: github, user_url: "https://github.com/vasukalariya" }
+    - { platform: linkedin, user_url: "https://linkedin.com/in/vasukalariya" }
+
 author:
   name: Vasu Kalariya
-  email: firstname lastname 2 [at] gmail [dot] com
 
-# Navigation
-nav_enabled: true
-search_enabled: true
-
-# Footer
-footer_content: "Built with Jekyll and Notion."
-
-# Social links in footer
-aux_links:
-  "GitHub": "https://github.com/vasukalariya"
-  "LinkedIn": "https://www.linkedin.com/in/vasukalariya"
-
-# Build settings
 markdown: kramdown
-permalink: /blog/:year/:month/:day/:title/
+permalink: /:year/:month/:day/:title/
+show_excerpts: true
 
-# Exclude
 exclude:
   - node_modules/
   - package.json
-  - package-lock.json
   - sync.js
   - .env
-  - README.md
-  - Gemfile
-  - Gemfile.lock
-  - vendor/
 
-# Plugins
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-remote-theme
 
-# Timezone
 timezone: America/Los_Angeles
